@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vérifiez votre compte de démonstration Chez Wieme avec le code 123456.">
+  <link rel="canonical" href="https://touirwieme-blip.github.io/plat-d-etudiant/verification.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chez Wieme">
+  <meta property="og:title" content="Chez Wieme — Cuisine maison pour étudiants">
+  <meta property="og:description" content="Des plats maison généreux livrés aux étudiants du foyer et de la faculté en Tunisie.">
+  <meta property="og:url" content="https://touirwieme-blip.github.io/plat-d-etudiant/verification.html">
+  <meta name="theme-color" content="#1d1511">
+  <title>Vérification — Chez Wieme</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <p>🍲 Cuisine maison • Livraison au foyer et à la fac</p>
+        <a href="contact.html">Une question ? Écrivez-nous →</a>
+      </div>
+    </div>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Chez Wieme, accueil">
+        <span class="logo-mark" aria-hidden="true">W</span>
+        <span class="logo-text">
+          <strong>Chez Wieme</strong>
+          <span>Cuisine maison • Livraison étudiante</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="plats.html">La carte</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" href="connexion.html" data-account-link aria-label="Se connecter ou créer un compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.4 3.1-5.5 7-5.5s7 2.1 7 5.5"/></svg>
+        </a>
+        <a class="icon-btn" href="panier.html" data-cart-link aria-label="Mon panier, vide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h2l2.2 10.2a2 2 0 0 0 2 1.6h6.9a2 2 0 0 0 2-1.6L21 8H7"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span class="cart-count" data-cart-count data-empty="true">0</span>
+        </a>
+        <a class="btn btn-primary btn-small header-cta" href="plats.html">Commander</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="section">
+      <div class="container">
+        <div class="auth-layout">
+
+          <aside class="auth-aside">
+            <p class="kicker kicker--light">Dernière étape</p>
+            <h2>Vérifions votre adresse.</h2>
+            <p>
+              Dans une vraie boutique, un e-mail contenant un code serait envoyé.
+              Ici, tout est simulé : le code est affiché ci-contre.
+            </p>
+            <ul class="auth-list">
+              <li>Aucun e-mail réel n'est envoyé</li>
+              <li>Code de démonstration : 123456</li>
+              <li>Vérification stockée dans le navigateur</li>
+            </ul>
+          </aside>
+
+          <div class="auth-card">
+            <h1>Vérifier votre e-mail</h1>
+            <p>
+              Saisissez le code à 6 chiffres pour activer le compte
+              <strong data-verify-email>votre adresse</strong>.
+            </p>
+
+            <div class="code-box">
+              <strong>123456</strong>
+              <span>Code de démonstration — affiché volontairement</span>
+            </div>
+
+            <div class="alert alert-error" data-verify-error role="alert" hidden></div>
+            <div class="alert alert-success" data-verify-success role="status" hidden></div>
+
+            <form data-verify-form novalidate>
+              <div class="form-group">
+                <label for="verify-code">Code à 6 chiffres <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="verify-code"
+                  name="code"
+                  inputmode="numeric"
+                  pattern="[0-9]{6}"
+                  maxlength="6"
+                  autocomplete="one-time-code"
+                  placeholder="123456"
+                  required
+                  aria-describedby="erreur-verify-code"
+                >
+                <p class="error" id="erreur-verify-code"></p>
+              </div>
+
+              <button class="btn btn-primary btn-full" type="submit">Vérifier mon compte</button>
+            </form>
+
+            <p class="auth-switch">
+              Vous n'avez pas reçu de code ? <a href="#" data-resend-code>Renvoyer le code</a>
+            </p>
+
+            <div class="empty-state" data-verify-no-email hidden>
+              <span class="empty-state-icon" aria-hidden="true">✉️</span>
+              <h2>Aucune adresse à vérifier.</h2>
+              <p>Créez d'abord un compte, puis revenez sur cette page avec le code 123456.</p>
+              <a class="btn btn-primary" href="inscription.html">Créer un compte</a>
+            </div>
+
+            <p class="auth-help">
+              Déjà vérifié ? <a href="connexion.html">Se connecter</a><br>
+              Démonstration locale : la vérification ne quitte pas votre navigateur.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo logo--footer" href="index.html">
+          <span class="logo-mark" aria-hidden="true">W</span>
+          <span class="logo-text">
+            <strong>Chez Wieme</strong>
+            <span>Cuisine maison • Livraison étudiante</span>
+          </span>
+        </a>
+        <p class="footer-text">Des plats maison pour les étudiants du foyer et de la faculté. Choisissez, commandez, régalez-vous.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/" data-whatsapp="Bonjour Chez Wieme, je voudrais passer une commande." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="https://www.instagram.com/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+          <a href="https://www.facebook.com/" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Explorer</h3>
+        <ul class="footer-links">
+          <li><a href="plats.html">La carte</a></li>
+          <li><a href="plats-principaux.html">Plats principaux</a></li>
+          <li><a href="formules-etudiantes.html">Formules étudiantes</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Mon compte</h3>
+        <ul class="footer-links">
+          <li><a href="connexion.html">Se connecter</a></li>
+          <li><a href="inscription.html">Créer un compte</a></li>
+          <li><a href="compte.html">Mes commandes</a></li>
+          <li><a href="panier.html">Mon panier</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Infos pratiques</h3>
+        <ul class="footer-links footer-info">
+          <li>📍 Livraison au foyer et à la faculté</li>
+          <li>🕒 Commandes confirmées par message</li>
+          <li>💬 Une question ? Contactez-nous</li>
+          <li>🇹🇳 Prix en dinars tunisiens</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Chez Wieme — Projet étudiant de Wieme Touir.</p>
+      <p>Prototype de démonstration — aucun paiement réel.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

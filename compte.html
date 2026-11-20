@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Votre espace Chez Wieme : profil, statut du compte et historique de vos commandes simulées.">
+  <link rel="canonical" href="https://touirwieme-blip.github.io/plat-d-etudiant/compte.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chez Wieme">
+  <meta property="og:title" content="Chez Wieme — Cuisine maison pour étudiants">
+  <meta property="og:description" content="Des plats maison généreux livrés aux étudiants du foyer et de la faculté en Tunisie.">
+  <meta property="og:url" content="https://touirwieme-blip.github.io/plat-d-etudiant/compte.html">
+  <meta name="theme-color" content="#1d1511">
+  <title>Mon compte — Chez Wieme</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <p>🍲 Cuisine maison • Livraison au foyer et à la fac</p>
+        <a href="contact.html">Une question ? Écrivez-nous →</a>
+      </div>
+    </div>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Chez Wieme, accueil">
+        <span class="logo-mark" aria-hidden="true">W</span>
+        <span class="logo-text">
+          <strong>Chez Wieme</strong>
+          <span>Cuisine maison • Livraison étudiante</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="plats.html">La carte</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" href="connexion.html" data-account-link aria-label="Se connecter ou créer un compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.4 3.1-5.5 7-5.5s7 2.1 7 5.5"/></svg>
+        </a>
+        <a class="icon-btn" href="panier.html" data-cart-link aria-label="Mon panier, vide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h2l2.2 10.2a2 2 0 0 0 2 1.6h6.9a2 2 0 0 0 2-1.6L21 8H7"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span class="cart-count" data-cart-count data-empty="true">0</span>
+        </a>
+        <a class="btn btn-primary btn-small header-cta" href="plats.html">Commander</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li aria-current="page">Mon compte</li>
+          </ol>
+        </nav>
+        <p class="kicker">Mon espace</p>
+        <h1>Votre compte Chez Wieme.</h1>
+        <p>Retrouvez vos informations et l'historique de vos commandes de démonstration.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container" data-account-page>
+
+        <div class="account-header">
+          <div>
+            <p class="kicker">Bonjour</p>
+            <h1><span data-account-firstname>Étudiant</span> 👋</h1>
+            <p>Votre espace local, conservé sur cet appareil.</p>
+          </div>
+          <div class="header-actions">
+            <a class="btn btn-secondary" href="panier.html">Mon panier</a>
+            <button class="btn btn-secondary" type="button" data-logout>Se déconnecter</button>
+          </div>
+        </div>
+
+        <div class="account-grid">
+          <section class="account-card" aria-labelledby="profil-titre">
+            <h2 id="profil-titre">Mon profil</h2>
+            <ul class="info-list">
+              <li>
+                <span>Nom complet</span>
+                <strong data-account-fullname>—</strong>
+              </li>
+              <li>
+                <span>E-mail</span>
+                <strong data-account-email>—</strong>
+              </li>
+              <li>
+                <span>Compte créé le</span>
+                <strong data-account-since>—</strong>
+              </li>
+              <li>
+                <span>Statut</span>
+                <strong data-account-status>—</strong>
+              </li>
+            </ul>
+
+            <p class="form-note">
+              Prototype local : vos informations restent dans le navigateur et ne sont envoyées à aucun serveur.
+            </p>
+          </section>
+
+          <section class="account-card" aria-labelledby="commandes-titre">
+            <h2 id="commandes-titre">Mes commandes</h2>
+
+            <div class="empty-state" data-account-orders-empty hidden>
+              <span class="empty-state-icon" aria-hidden="true">🧾</span>
+              <h2>Aucune commande pour le moment.</h2>
+              <p>Vos commandes simulées apparaîtront ici après validation du panier.</p>
+              <a class="btn btn-primary" href="plats.html">Découvrir la carte</a>
+            </div>
+
+            <div class="orders-list" data-account-orders hidden></div>
+
+            <p class="form-note">
+              Les commandes sont simulées : aucune préparation réelle n'est lancée.
+              Pour commander vraiment, écrivez-nous sur WhatsApp.
+            </p>
+          </section>
+        </div>
+
+        <div class="cta-band" style="margin-top: 34px;">
+          <div>
+            <p class="kicker">Une petite faim ?</p>
+            <h2>La carte est toujours ouverte.</h2>
+            <p>Ajoutez un plat à votre panier et reprenez votre commande là où vous l'avez laissée.</p>
+          </div>
+          <div class="cta-band-actions">
+            <a class="btn btn-primary" href="plats.html">Voir la carte</a>
+            <a class="btn btn-ghost-light" href="contact.html">Nous contacter</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo logo--footer" href="index.html">
+          <span class="logo-mark" aria-hidden="true">W</span>
+          <span class="logo-text">
+            <strong>Chez Wieme</strong>
+            <span>Cuisine maison • Livraison étudiante</span>
+          </span>
+        </a>
+        <p class="footer-text">Des plats maison pour les étudiants du foyer et de la faculté. Choisissez, commandez, régalez-vous.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/" data-whatsapp="Bonjour Chez Wieme, je voudrais passer une commande." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="https://www.instagram.com/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+          <a href="https://www.facebook.com/" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Explorer</h3>
+        <ul class="footer-links">
+          <li><a href="plats.html">La carte</a></li>
+          <li><a href="plats-principaux.html">Plats principaux</a></li>
+          <li><a href="formules-etudiantes.html">Formules étudiantes</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Mon compte</h3>
+        <ul class="footer-links">
+          <li><a href="connexion.html">Se connecter</a></li>
+          <li><a href="inscription.html">Créer un compte</a></li>
+          <li><a href="compte.html">Mes commandes</a></li>
+          <li><a href="panier.html">Mon panier</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Infos pratiques</h3>
+        <ul class="footer-links footer-info">
+          <li>📍 Livraison au foyer et à la faculté</li>
+          <li>🕒 Commandes confirmées par message</li>
+          <li>💬 Une question ? Contactez-nous</li>
+          <li>🇹🇳 Prix en dinars tunisiens</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Chez Wieme — Projet étudiant de Wieme Touir.</p>
+      <p>Prototype de démonstration — aucun paiement réel.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

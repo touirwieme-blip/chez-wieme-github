@@ -1,0 +1,146 @@
+CHEZ WIEME — GUIDE DU PROTOTYPE
+================================
+
+Ce dossier contient un prototype de site e-commerce local, en HTML,
+CSS et JavaScript simples. Aucun serveur, aucune base de données,
+aucun paiement réel et aucune bibliothèque externe ne sont nécessaires.
+
+PAGES
+-----
+- index.html                  Accueil, plats, catégories, formule, avis
+- plats.html                 La carte complète + filtres
+- plats-principaux.html      Catégorie « Plats principaux »
+- formules-etudiantes.html   Catégorie « Formules étudiantes »
+- plat.html?id=...           Fiche produit (ex. plat.html?id=couscous)
+- panier.html                Panier et quantités
+- commande.html              Formulaire de livraison + paiement simulé
+- confirmation.html          Récapitulatif de la commande simulée
+- inscription.html           Création de compte
+- connexion.html             Connexion
+- verification.html          Vérification du compte (code de démo)
+- compte.html                Profil + historique des commandes
+- a-propos.html              Présentation
+- contact.html               Contact + WhatsApp + formulaire local
+- style.css                  Design, responsive, animations
+- script.js                  Catalogue, panier, comptes, commandes
+- images/                    Photos du site
+
+LANCER LE SITE
+--------------
+Méthode 1 — VS Code + Live Server :
+1. Ouvrir le dossier « mon-site » dans VS Code.
+2. Installer l'extension « Live Server ».
+3. Clic droit sur index.html → « Open with Live Server ».
+
+Méthode 2 — serveur local Python :
+1. Ouvrir un terminal dans le dossier « mon-site ».
+2. Taper : python -m http.server 8000
+3. Ouvrir : http://localhost:8000
+
+Ne pas ouvrir les pages par double-clic (file://) : le panier et les
+comptes utilisent localStorage et certaines pages ont besoin d'une URL.
+
+COMPTE DE DÉMONSTRATION
+-----------------------
+1. Aller sur inscription.html.
+2. Remplir le formulaire, accepter les conditions, valider.
+3. Le code de vérification de démonstration est : 123456
+4. Se connecter avec l'e-mail et le mot de passe choisis.
+
+Le code 123456 est affiché volontairement : c'est une démonstration.
+Aucun e-mail réel n'est envoyé.
+
+TESTER LE PARCOURS COMPLET
+--------------------------
+1. Créer un compte → vérifier avec 123456 → se connecter.
+2. Ouvrir plats.html, ajouter un plat au panier.
+3. Ouvrir panier.html, modifier la quantité.
+4. Passer la commande, remplir l'adresse, choisir un paiement simulé.
+5. Confirmer : une référence CW-... est créée.
+6. Ouvrir compte.html : la commande apparaît dans l'historique.
+7. Se déconnecter depuis compte.html.
+
+DONNÉES ET LIMITES
+------------------
+- Tout est stocké dans le navigateur (localStorage) :
+  chezWieme.users, chezWieme.session, chezWieme.cart,
+  chezWieme.orders, chezWieme.pendingVerification.
+- Les mots de passe sont hachés côté navigateur, mais ce n'est PAS
+  une sécurité de production.
+- Aucune commande n'est envoyée à un vrai service : tout est simulé.
+- Aucun paiement réel : aucune donnée bancaire n'est demandée.
+- Le code de vérification est fixe (123456) et visible.
+- Le numéro WhatsApp, la ville, les horaires et les vrais réseaux
+  sociaux n'ont pas été fournis : ce sont des valeurs de démo.
+- Les photos fournies sont utilisées pour illustrer la carte.
+  Remplacer les fichiers dans images/ en gardant les mêmes noms
+  (couscous.jpg, image-3.jpg, ojja.jpg) pour actualiser le site.
+
+PERSONNALISER
+-------------
+- Couleurs et polices : bloc « :root » au début de style.css.
+- Textes : fichiers .html.
+- Catalogue, prix, livraison, WhatsApp : constantes au début de
+  script.js (CATALOG, DELIVERY, CONTACT).
+- Photos : dossier images/ (noms ASCII, .jpg de préférence).
+
+E-MAIL AUTOMATIQUE AU CLIENT (EmailJS)
+--------------------------------------
+Un site statique ne peut pas envoyer d'e-mail tout seul. Pour que le
+client reçoive vraiment le récapitulatif par e-mail, le site utilise
+le service gratuit EmailJS (offre gratuite : 200 e-mails / mois).
+
+1. Créer un compte gratuit : https://www.emailjs.com/
+2. « Email Services » > Add New Service > Gmail, connecter
+   touirwieme@gmail.com, puis copier le Service ID.
+3. « Email Templates » > Create New Template :
+   - champ « To Email » : {{to_email}}
+   - sujet : {{order_subject}}
+   - contenu : {{order_body}}
+   puis copier le Template ID.
+4. « Account » > General > copier la Public Key.
+5. Dans script.js, tout en haut, remplir :
+     const EMAILJS = {
+       publicKey: "VOTRE_PUBLIC_KEY",
+       serviceId: "VOTRE_SERVICE_ID",
+       templateId: "VOTRE_TEMPLATE_ID"
+     };
+6. Republier le site (voir SITE EN LIGNE plus bas).
+
+Tant que ces trois valeurs sont vides, le bouton « Recevoir le
+récapitulatif par e-mail » ouvre l'application de messagerie du client
+avec le message déjà écrit : il lui reste juste à cliquer sur Envoyer.
+
+Quand EmailJS est configuré, l'e-mail part automatiquement dès que la
+page de confirmation s'affiche, et un message « Récapitulatif envoyé
+à ... » apparaît. Un seul envoi par commande.
+
+SITE EN LIGNE
+-------------
+Adresse publique actuelle :
+  https://chez-wieme.surge.sh
+
+Hébergement : Surge.sh (statique, HTTPS, gratuit).
+Le site est publié depuis le dossier « mon-site ».
+
+Mettre à jour le site en ligne après une modification :
+1. Installer Node.js : https://nodejs.org/
+2. Dans un terminal, se placer dans « mon-site ».
+3. Taper : npx surge . chez-wieme.surge.sh
+4. Se connecter avec le compte Surge fourni séparément.
+
+DÉPLOYER SUR VERCEL
+-------------------
+Le dossier à déployer est « mon-site » (pas le dossier parent).
+Solution simple avec Vercel CLI :
+1. Installer Node.js : https://nodejs.org/
+2. Dans un terminal, se placer dans « mon-site ».
+3. Taper : npx vercel
+4. Se connecter / créer un compte Vercel dans le navigateur.
+5. Pour la production : npx vercel --prod
+
+Aucun build n'est nécessaire : Vercel sert directement les fichiers
+statiques. Il faut obligatoirement un compte Vercel (ou un token)
+pour publier : le déploiement ne peut pas être anonyme.
+
+Bon test !

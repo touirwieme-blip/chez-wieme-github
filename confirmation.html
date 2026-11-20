@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirmation de votre commande simulée Chez Wieme : référence, plats, total et adresse de livraison.">
+  <link rel="canonical" href="https://touirwieme-blip.github.io/plat-d-etudiant/confirmation.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chez Wieme">
+  <meta property="og:title" content="Chez Wieme — Cuisine maison pour étudiants">
+  <meta property="og:description" content="Des plats maison généreux livrés aux étudiants du foyer et de la faculté en Tunisie.">
+  <meta property="og:url" content="https://touirwieme-blip.github.io/plat-d-etudiant/confirmation.html">
+  <meta name="theme-color" content="#1d1511">
+  <title>Commande confirmée — Chez Wieme</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <p>🍲 Cuisine maison • Livraison au foyer et à la fac</p>
+        <a href="contact.html">Une question ? Écrivez-nous →</a>
+      </div>
+    </div>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Chez Wieme, accueil">
+        <span class="logo-mark" aria-hidden="true">W</span>
+        <span class="logo-text">
+          <strong>Chez Wieme</strong>
+          <span>Cuisine maison • Livraison étudiante</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="plats.html">La carte</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" href="connexion.html" data-account-link aria-label="Se connecter ou créer un compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.4 3.1-5.5 7-5.5s7 2.1 7 5.5"/></svg>
+        </a>
+        <a class="icon-btn" href="panier.html" data-cart-link aria-label="Mon panier, vide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h2l2.2 10.2a2 2 0 0 0 2 1.6h6.9a2 2 0 0 0 2-1.6L21 8H7"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span class="cart-count" data-cart-count data-empty="true">0</span>
+        </a>
+        <a class="btn btn-primary btn-small header-cta" href="plats.html">Commander</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="section">
+      <div class="container" data-confirmation-page>
+
+        <div class="confirmation-card" data-confirmation-content hidden>
+          <div class="confirmation-icon" aria-hidden="true">✓</div>
+          <h1>Merci, votre commande est enregistrée.</h1>
+          <p>
+            C'est une commande de démonstration : elle est conservée dans votre navigateur
+            et aucune préparation réelle n'est lancée.
+          </p>
+
+          <p class="order-reference">Référence : <strong data-confirmation-reference>CW-0000</strong></p>
+
+          <div class="order-details">
+            <h2>Récapitulatif</h2>
+
+            <p class="form-note">
+              Date : <strong data-confirmation-date></strong> ·
+              Paiement : <strong data-confirmation-payment></strong>
+            </p>
+
+            <ul class="order-items" data-confirmation-items></ul>
+
+            <div class="summary-lines">
+              <div class="summary-line">
+                <span>Sous-total</span>
+                <strong data-confirmation-subtotal>0,00 DT</strong>
+              </div>
+              <div class="summary-line">
+                <span>Livraison</span>
+                <strong data-confirmation-delivery>0,00 DT</strong>
+              </div>
+            </div>
+
+            <div class="order-total">
+              <span>Total</span>
+              <strong data-confirmation-total>0,00 DT</strong>
+            </div>
+
+            <p class="order-address" data-confirmation-address></p>
+          </div>
+
+          <p class="email-status" data-email-status role="status" hidden></p>
+
+          <div class="confirmation-actions">
+            <a class="btn btn-whatsapp" data-order-whatsapp href="#" target="_blank" rel="noopener">📲 Envoyer la commande par WhatsApp à Chez Wieme</a>
+            <a class="btn btn-whatsapp-light" data-client-whatsapp href="#" target="_blank" rel="noopener">💬 Recevoir le récapitulatif sur mon WhatsApp</a>
+            <a class="btn btn-secondary" data-order-mail href="#">✉️ Recevoir le récapitulatif par e-mail</a>
+            <a class="btn btn-primary" href="compte.html">Voir mes commandes</a>
+            <a class="btn btn-secondary" href="plats.html">Commander à nouveau</a>
+            <a class="btn btn-secondary" href="contact.html">Nous contacter</a>
+          </div>
+
+          <p class="demo-warning">
+            WhatsApp s'ouvre avec la commande déjà écrite : envoie-la à Chez Wieme,
+            qui te répond directement. Le bouton « Recevoir le récapitulatif sur mon WhatsApp »
+            ouvre une conversation avec ton propre numéro (<strong data-confirmation-phone>ton numéro</strong>)
+            pour garder le récapitulatif. L'e-mail part vers
+            <strong data-confirmation-email>ton adresse</strong>.
+          </p>
+
+          <p class="demo-warning">
+            Prototype local : la commande n'est pas transmise à un vrai service de livraison.
+            Pour une commande réelle, contactez-nous sur WhatsApp.
+          </p>
+        </div>
+
+        <div class="empty-state" data-confirmation-missing hidden>
+          <span class="empty-state-icon" aria-hidden="true">🧾</span>
+          <h2>Commande introuvable.</h2>
+          <p>La référence est absente ou ne correspond pas à votre compte.</p>
+          <div class="confirmation-actions">
+            <a class="btn btn-primary" href="compte.html">Voir mes commandes</a>
+            <a class="btn btn-secondary" href="plats.html">Retour à la carte</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="kicker">Encore une petite faim ?</p>
+            <h2>La carte reste ouverte.</h2>
+            <p>Vous pouvez passer une autre commande de démonstration à tout moment.</p>
+          </div>
+          <div class="cta-band-actions">
+            <a class="btn btn-primary" href="plats.html">Voir la carte</a>
+            <a class="btn btn-ghost-light" href="compte.html">Mon compte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo logo--footer" href="index.html">
+          <span class="logo-mark" aria-hidden="true">W</span>
+          <span class="logo-text">
+            <strong>Chez Wieme</strong>
+            <span>Cuisine maison • Livraison étudiante</span>
+          </span>
+        </a>
+        <p class="footer-text">Des plats maison pour les étudiants du foyer et de la faculté. Choisissez, commandez, régalez-vous.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/" data-whatsapp="Bonjour Chez Wieme, je voudrais passer une commande." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="https://www.instagram.com/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+          <a href="https://www.facebook.com/" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Explorer</h3>
+        <ul class="footer-links">
+          <li><a href="plats.html">La carte</a></li>
+          <li><a href="plats-principaux.html">Plats principaux</a></li>
+          <li><a href="formules-etudiantes.html">Formules étudiantes</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Mon compte</h3>
+        <ul class="footer-links">
+          <li><a href="connexion.html">Se connecter</a></li>
+          <li><a href="inscription.html">Créer un compte</a></li>
+          <li><a href="compte.html">Mes commandes</a></li>
+          <li><a href="panier.html">Mon panier</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Infos pratiques</h3>
+        <ul class="footer-links footer-info">
+          <li>📍 Livraison au foyer et à la faculté</li>
+          <li>🕒 Commandes confirmées par message</li>
+          <li>💬 Une question ? Contactez-nous</li>
+          <li>🇹🇳 Prix en dinars tunisiens</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Chez Wieme — Projet étudiant de Wieme Touir.</p>
+      <p>Prototype de démonstration — aucun paiement réel.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

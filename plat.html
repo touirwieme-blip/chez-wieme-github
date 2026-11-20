@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez un plat Chez Wieme : ingrédients, prix et ajout au panier. Cuisine maison livrée au foyer et à la faculté.">
+  <link rel="canonical" href="https://touirwieme-blip.github.io/plat-d-etudiant/plat.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chez Wieme">
+  <meta property="og:title" content="Chez Wieme — Cuisine maison pour étudiants">
+  <meta property="og:description" content="Des plats maison généreux livrés aux étudiants du foyer et de la faculté en Tunisie.">
+  <meta property="og:url" content="https://touirwieme-blip.github.io/plat-d-etudiant/plat.html">
+  <meta name="theme-color" content="#1d1511">
+  <title>Détail d'un plat — Chez Wieme</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <p>🍲 Cuisine maison • Livraison au foyer et à la fac</p>
+        <a href="contact.html">Une question ? Écrivez-nous →</a>
+      </div>
+    </div>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Chez Wieme, accueil">
+        <span class="logo-mark" aria-hidden="true">W</span>
+        <span class="logo-text">
+          <strong>Chez Wieme</strong>
+          <span>Cuisine maison • Livraison étudiante</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="plats.html" aria-current="page">La carte</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" href="connexion.html" data-account-link aria-label="Se connecter ou créer un compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.4 3.1-5.5 7-5.5s7 2.1 7 5.5"/></svg>
+        </a>
+        <a class="icon-btn" href="panier.html" data-cart-link aria-label="Mon panier, vide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h2l2.2 10.2a2 2 0 0 0 2 1.6h6.9a2 2 0 0 0 2-1.6L21 8H7"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span class="cart-count" data-cart-count data-empty="true">0</span>
+        </a>
+        <a class="btn btn-primary btn-small header-cta" href="panier.html">Mon panier</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="section section--tight">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="plats.html">La carte</a></li>
+            <li aria-current="page">Détail du plat</li>
+          </ol>
+        </nav>
+
+        <div class="detail-layout" data-product-detail>
+          <div class="detail-visual dish-visual--couscous" data-detail-visual role="img" aria-label="Illustration du plat">
+            <img class="detail-photo" data-detail-image alt="" hidden>
+            <span class="detail-emoji" data-detail-emoji aria-hidden="true">🍛</span>
+          </div>
+
+          <div class="detail-body">
+            <p class="kicker" data-detail-category>Plat principal</p>
+            <h1 data-detail-name>Le plat</h1>
+            <p class="detail-price">
+              <strong data-detail-price>0,00 DT</strong>
+              <span data-detail-price-note>TTC</span>
+            </p>
+            <p class="detail-description" data-detail-description>Chargement du plat…</p>
+
+            <ul class="feature-list" data-detail-features></ul>
+
+            <div class="detail-actions">
+              <div class="qty-control" role="group" aria-label="Quantité">
+                <button type="button" data-detail-minus aria-label="Diminuer la quantité">−</button>
+                <span data-detail-qty aria-live="polite">1</span>
+                <button type="button" data-detail-plus aria-label="Augmenter la quantité">+</button>
+              </div>
+              <button class="btn btn-primary" type="button" data-detail-add>Ajouter au panier</button>
+              <a class="btn btn-secondary" href="https://wa.me/" data-detail-whatsapp target="_blank" rel="noopener">💬 Commander sur WhatsApp</a>
+            </div>
+
+            <p class="form-note">
+              Retour à la catégorie : <a class="text-link" href="plats.html" data-detail-category-link>La carte</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="empty-state" data-detail-missing hidden>
+          <span class="empty-state-icon" aria-hidden="true">🍽️</span>
+          <h2>Ce plat n'est pas disponible.</h2>
+          <p>Il a peut-être changé de nom ou n'est plus à la carte cette semaine.</p>
+          <a class="btn btn-primary" href="plats.html">Revenir à la carte</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <p class="kicker">À découvrir aussi</p>
+            <h2>D'autres plats qui pourraient vous plaire.</h2>
+          </div>
+          <a class="text-link" href="plats.html">Toute la carte →</a>
+        </div>
+
+        <div class="dish-grid" data-related></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="kicker">Une question sur ce plat ?</p>
+            <h2>On vous répond directement.</h2>
+            <p>Allergies, ingrédients ou quantité : écrivez-nous sur WhatsApp ou depuis la page Contact.</p>
+          </div>
+          <div class="cta-band-actions">
+            <a class="btn btn-primary" href="contact.html">Nous contacter</a>
+            <a class="btn btn-ghost-light" href="panier.html">Voir mon panier</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo logo--footer" href="index.html">
+          <span class="logo-mark" aria-hidden="true">W</span>
+          <span class="logo-text">
+            <strong>Chez Wieme</strong>
+            <span>Cuisine maison • Livraison étudiante</span>
+          </span>
+        </a>
+        <p class="footer-text">Des plats maison pour les étudiants du foyer et de la faculté. Choisissez, commandez, régalez-vous.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/" data-whatsapp="Bonjour Chez Wieme, je voudrais passer une commande." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="https://www.instagram.com/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+          <a href="https://www.facebook.com/" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Explorer</h3>
+        <ul class="footer-links">
+          <li><a href="plats.html">La carte</a></li>
+          <li><a href="plats-principaux.html">Plats principaux</a></li>
+          <li><a href="formules-etudiantes.html">Formules étudiantes</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Mon compte</h3>
+        <ul class="footer-links">
+          <li><a href="connexion.html">Se connecter</a></li>
+          <li><a href="inscription.html">Créer un compte</a></li>
+          <li><a href="compte.html">Mes commandes</a></li>
+          <li><a href="panier.html">Mon panier</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Infos pratiques</h3>
+        <ul class="footer-links footer-info">
+          <li>📍 Livraison au foyer et à la faculté</li>
+          <li>🕒 Commandes confirmées par message</li>
+          <li>💬 Une question ? Contactez-nous</li>
+          <li>🇹🇳 Prix en dinars tunisiens</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Chez Wieme — Projet étudiant de Wieme Touir.</p>
+      <p>Prototype de démonstration — aucun paiement réel.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
